@@ -1,0 +1,29 @@
+
+<router-outlet></router-outlet>
+
+
+<mat-form-field>
+  <ngx-mat-file-input formControlName="acceptfile" placeholder="CSV file only" [accept]="'.csv'"  (change)="onChange($event)"></ngx-mat-file-input>
+  <mat-icon matSuffix>folder</mat-icon>
+</mat-form-field>
+
+
+
+<mat-tab-group>
+  <mat-tab label="History">
+    <ng-template matTabContent>
+      <app-history></app-history>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Products">
+    <ng-template matTabContent>
+      <app-products></app-products>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Years">
+    <ng-template matTabContent>
+
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
